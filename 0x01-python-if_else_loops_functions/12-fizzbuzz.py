@@ -3,7 +3,7 @@ def fizzbuzz():
     "Change the multiples of three, and five for fizz buzz"
     for i in range(1, 101):
         if ((i % 3) == 0 and (i % 5 == 0)):
-            print("FizzBuzz ")
+            print("FizzBuzz ", end='')
             continue
         elif ((i % 3) == 0):
             print("Fizz ", end='')
