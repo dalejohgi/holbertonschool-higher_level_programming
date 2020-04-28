@@ -3,7 +3,8 @@ def uppercase(str):
     "Change a string to uppercase"
     for i in range(len(str)):
         if (ord(str[i]) >= 97):
-            print("{}".format(chr(ord(str[i]) - 32)), end='')
+            upper = ord(str[i]) - 32
         else:
-            print("{}".format(str[i]), end='')
+            upper = ord(str[i])
+        print("{}".format(chr(upper)), end='')
     print()
