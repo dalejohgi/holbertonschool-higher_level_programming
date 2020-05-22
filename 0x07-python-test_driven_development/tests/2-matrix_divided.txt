@@ -1,0 +1,77 @@
+The ``2-matrix_divided`` module
+===================================
+Using ``matrix_divided``
+-------------------------------------------------------
+importing matrix_divided from 2-matrix_divided
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Check 1 Checks for normal case
+    >>> matrix = [[2, 4, 6], [10, 20, 30], [100, 200, 300]]
+    >>> matrix_divided(matrix, 2)
+    [[1.0, 2.0, 3.0], [5.0, 10.0, 15.0], [50.0, 100.0, 150.0]]
+
+Check 2 - Checks for first list of diferent size
+    >>> matrix = [[2, 4, 6, 4], [10, 20, 30], [100, 200, 300]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+Check 3 - Checks for 2nd list of different size
+    >>> matrix = [[2, 4, 6], [10, 20, 30, 40], [100, 200, 300]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+Check 4 - Checks for matrix of floats
+    >>> matrix = [[2.2, 4.2, 6.2], [10.2, 20.2, 30.2], [100.2, 200.2, 300.2]]
+    >>> matrix_divided(matrix, 2)
+    [[1.1, 2.1, 3.1], [5.1, 10.1, 15.1], [50.1, 100.1, 150.1]]
+
+Check 5 - Checks for mixed matrix
+    >>> matrix = [[2.2, 4.2, 6.2], [10, 20, 30], [100.2, 200.2, 300.2]]
+    >>> matrix_divided(matrix, 2)
+    [[1.1, 2.1, 3.1], [5.0, 10.0, 15.0], [50.1, 100.1, 150.1]]
+
+Check 6 - Checks for None matrix
+    >>> matrix_divided(None, 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Check 7 - Checks for non int / float values
+    >>> matrix = [[2, 4, 6], [10, 20, 30], ['Holberton', 200, 300]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Check 8 - Checks for non list in matrix
+    >>> matrix = [[2, 4, 6], 'this_is_not_a_list', [100, 200, 300]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Check 9 - Checks for zero div
+    >>> matrix = [[2, 4, 6], [10, 20, 30], [100, 200, 300]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+Check 10 - Checks for negative divisor
+    >>> matrix_divided(matrix, -2)
+    [[-1.0, -2.0, -3.0], [-5.0, -10.0, -15.0], [-50.0, -100.0, -150.0]]
+
+Check 11 - Checks for non number div
+    >>> matrix_divided(matrix, 'Holberton')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+Check 12 - Checks for none div
+    >>> matrix_divided(matrix, None)
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+Check 13 - Checks for new matrix
+    >>> matrix = [[2, 4, 6], [10, 20, 30], [100, 200, 300]]
+    >>> matrix_divided(matrix, 2)
+    [[1.0, 2.0, 3.0], [5.0, 10.0, 15.0], [50.0, 100.0, 150.0]]
+    >>> matrix
+    [[2, 4, 6], [10, 20, 30], [100, 200, 300]]

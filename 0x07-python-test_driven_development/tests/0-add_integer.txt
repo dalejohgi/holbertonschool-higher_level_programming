@@ -1,0 +1,42 @@
+The ``0-add_integer`` module
+===================================
+Using ``add_integer``
+-------------------------------------------------------
+importing add_integer from 0-add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Check 1 - Check for a simple add of two ints
+    >>> add_integer(5, 5)
+    10
+
+Check 2 - Check for None values
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Check 3 - Checks for floats values
+    >>> add_integer(6.5, 4.5)
+    10
+
+Check 4 - Checks for negative numbers
+    >>> add_integer(-3, -7)
+    -10
+
+Check 5 - Checks for booleans values
+    >>> add_integer(2, True)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+Check 6 - Checks for strings
+    >>> add_integer('H9', 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Check 7 - Checks for weird values
+    >>> add_integer([1, 2, 3], 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Check 8 - Checks for extra large numbers
+    >>> add_integer(100000000000000000000, 100000000000000000000)
+    200000000000000000000

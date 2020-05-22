@@ -1,0 +1,23 @@
+The ``5-text_indentation`` module
+===================================
+Using ``text_indentation``
+-----------------------------------
+importing text_indentation from 5-text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Check 0 - Checks for normal situations
+    >>> text_indentation("Have the courage to follow your heart and intuition. They somehow already know? what you truly want to become: Everything else is secondary.")
+    Have the courage to follow your heart and intuition
+    <BLANKLINE>
+    They somehow already know
+    <BLANKLINE>
+    what you truly want to become
+    <BLANKLINE>
+    Everything else is secondary
+    <BLANKLINE>
+
+Check 1 - Checks for non string value
+    >>> c = 4
+    >>> text_indentation(c)
+    Traceback (most recent call last):
+    TypeError: text must be a string

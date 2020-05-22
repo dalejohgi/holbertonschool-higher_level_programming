@@ -1,0 +1,24 @@
+The ``3-say_my_name``
+===================================
+Using ``say_my_name``
+-------------------------------------------------------
+importing say_my_name from 3-say_my_name
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Check 0 - Checks for normal case
+    >>> say_my_name('David Alejandro', 'Hincapie')
+    My name is David Alejandro Hincapie
+
+Check 1 - Checks for non last_name
+    >>> say_my_name("David")
+    My name is David 
+
+Check 2 - Checks for an int as a first_name
+    >>> say_my_name(25, "Barbier")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Check 3 - Checks for a float as a last_name
+    >>> say_my_name("David", 4.5)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
