@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """
-    Here goes the modules docstring
+    Module 5-text_indentation with text_indentation in it
 """
 
 
 def text_indentation(text):
+    """Split a text everytime it finds an special character and prints the lines so far"""
     if type(text) is not str:
         raise TypeError('text must be a string')
     line = ""

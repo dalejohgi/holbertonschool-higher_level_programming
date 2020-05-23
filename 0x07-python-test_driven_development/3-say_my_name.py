@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-    Here goes de module docstring
+    Module 3-say_my_name.py with the function say_my_name
 """
 
 
 def say_my_name(first_name, last_name=""):
-    """Here goes the fn docstring"""
+    """Functions that prints a complete name in a sentence"""
     if type(first_name) is not str:
         raise TypeError('first_name must be a string')
     elif type(last_name) is not str:

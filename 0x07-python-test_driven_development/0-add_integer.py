@@ -6,7 +6,7 @@
 
 def add_integer(a, b=98):
     """
-        Function that add two integers
+        Function that adds two integers
 
         Returns the result
     """

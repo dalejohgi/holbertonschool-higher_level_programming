@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-    Here goes the module docstring
+    Module 4-print_square with print_square function
 """
 
 
 def print_square(size):
-    """Here goes the fn docstring"""
+    """Prints a square made of # of an specific size"""
     if type(size) is not int:
         raise TypeError('size must be an integer')
     else:

@@ -3,9 +3,6 @@
     Module 2-matrix_divided
 
     Contains the function matrix_divided which divide a matrix by an int
-
-    Vairables: i elements in matrix
-                j elements in i
 """
 
 
