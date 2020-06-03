@@ -6,12 +6,11 @@ def read_lines(filename="", nb_lines=0):
     """Line counter for txt files"""
 
     line_counter = 0
-    with open(filename, encoding='utf-8') as my_file:
+    with open(filename, 'r', encoding='utf-8') as my_file:
         for lines in my_file:
             line_counter += 1
-
-    with open(filename, encoding='utf-8') as my_file:
-        if nb_lines <= 0 or nb_lines > line_counter:
+        my_file.seek(0)
+        if nb_lines <= 0 or nb_lines >= line_counter:
             print(my_file.read())
         else:
             for i in range(nb_lines):
