@@ -12,12 +12,6 @@ Base = base.Base
 class TestHbRequirements(unittest.TestCase):
     """Tests for Holberton Requirements"""
 
-    @classmethod
-    def setUpClass(cls):
-        """Print an init message"""
-        print("\n\n\nThis is the new Checker of Holberton School, "
-              "now checking the \"base module\" :)\n\nChecking...\n\n")
-
     def test_conformance(self):
         """Check for pycodestyle - PEP8."""
         style = pycodestyle.StyleGuide(quiet=True)
