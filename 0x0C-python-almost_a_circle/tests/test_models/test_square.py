@@ -3,7 +3,7 @@
 
 
 import unittest
-import pycodestyle
+import pep8
 import json
 from models import base
 Base = base.Base
@@ -14,7 +14,7 @@ class TestHbRequirements(unittest.TestCase):
 
     def test_conformance(self):
         """Check for pycodestyle - PEP8."""
-        style = pycodestyle.StyleGuide(quiet=True)
+        style = pep8.StyleGuide(quiet=True)
         result = style.check_files(['./models/base.py'])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
