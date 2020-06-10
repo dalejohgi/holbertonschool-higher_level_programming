@@ -3,7 +3,6 @@
 
 
 import unittest
-import pep8
 import json
 from models import base
 Base = base.Base
@@ -27,17 +26,6 @@ class TestFunctionalities(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """Set up some objects """
-
-    def test_id(self):
-        """Tests for the id generator"""
-        b1 = Base()
-        b2 = Base()
-        b3 = Base(508)
-        b4 = Base()
-        self.assertEqual(b1.id, 1)
-        self.assertEqual(b2.id, 2)
-        self.assertEqual(b3.id, 508)
-        self.assertEqual(b4.id, 3)
 
     def test_a_lot_of_args(self):
         """Test for many arguments passed to Base"""

@@ -3,7 +3,6 @@
 
 
 import unittest
-import pep8
 import json
 from models import base
 Base = base.Base
