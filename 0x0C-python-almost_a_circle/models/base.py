@@ -33,9 +33,9 @@ class Base:
         if list_objs is not None:
             for obj in list_objs:
                 dic_list.append(cls.to_dictionary(obj))
-            js_str = cls.to_json_string(dic_list)
-            with open(file_name, "w", encoding="utf-8") as j_file:
-                j_file.write(js_str)
+        js_str = cls.to_json_string(dic_list)
+        with open(file_name, "w", encoding="utf-8") as j_file:
+            j_file.write(js_str)
 
     @staticmethod
     def from_json_string(json_string):
