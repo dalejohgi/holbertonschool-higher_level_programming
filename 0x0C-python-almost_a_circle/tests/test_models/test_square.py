@@ -17,7 +17,7 @@ class TestHbRequirements(unittest.TestCase):
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/base.py'])
         self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings)."
+                         "Found code style errors (and warnings).")
 
     def test_mod_doc(self):
         """Checks the module documentation"""
@@ -30,10 +30,6 @@ class TestHbRequirements(unittest.TestCase):
 
 class TestFunctionalities(unittest.TestCase):
     """Testing functions"""
-
-    @classmethod
-    def setUpClass(cls):
-        """Set up some objects """
 
     def test_id(self):
         """Tests for the id generator"""
