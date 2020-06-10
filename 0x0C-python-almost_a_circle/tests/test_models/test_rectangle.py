@@ -12,12 +12,12 @@ Base = base.Base
 class TestHbRequirements(unittest.TestCase):
     """Tests for Holberton Requirements"""
 
-    def test_conformance(self):
-        """Check for pycodestyle - PEP8."""
-        style = pep8.StyleGuide(quiet=True)
-        result = style.check_files(['./models/base.py'])
+    def test_pep8_conformance_base(self):
+        """Test that models/base.py conforms to PEP8."""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/base.py'])
         self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+                         "Found code style errors (and warnings)."
 
     def test_mod_doc(self):
         """Checks the module documentation"""
