@@ -18,6 +18,7 @@ if __name__ == "__main__":
 
     states = session.query(State).filter_by(name=argv[4]).order_by(State.id)
     if states.first():
+        state = states.first()
         print("{}".format(state.id))
     else:
         print("Not found")
