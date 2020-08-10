@@ -7,6 +7,7 @@ from sqlalchemy.orm import relationship
 from model_state import Base
 from model_state import State
 
+
 class City(Base):
     """Docstring goes here"""
     __tablename__ = 'cities'
