@@ -2,7 +2,7 @@
 """Task 0"""
 
 if __name__ == "__main__":
-    from urllib import request
+    import urllib.request as request
     holb_url = "https://intranet.hbtn.io/status"
     response = request.urlopen(holb_url)
     content = response.read()
