@@ -6,11 +6,10 @@ if __name__ == "__main__":
     from requests import HTTPError
     from sys import argv
     url = argv[1]
-    try:
-        url = argv[1]
-        response = requests.get(url)
+    response = requests.get(url)
+    if response:
         content = response.text
         print(content)
-    except HTTPError as e:
-        status_code = e.response.status_code
+    else:
+        status_code = response.status_code
         print("Error code: {}".format(status_code))
