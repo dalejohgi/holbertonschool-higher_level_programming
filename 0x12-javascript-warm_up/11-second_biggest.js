@@ -2,13 +2,13 @@
 /*
 Prints the second higher int argument
 */
-let arguments = process.argv.slice(2);
-if (arguments.length > 1){
-  for(let i = 0; i < arguments.length; i++){
-    arguments[i] = parseInt(arguments[i]);
+let ArgList = process.argv.slice(2);
+if (ArgList.length > 1) {
+  for (let i = 0; i < ArgList.length; i++) {
+    ArgList[i] = parseInt(ArgList[i]);
   }
-  arguments = arguments.sort();
-  console.log(arguments.slice(-2)[0]);
+  ArgList = ArgList.sort();
+  console.log(ArgList.slice(-2)[0]);
 } else {
-  console.log(0)
+  console.log(0);
 }
